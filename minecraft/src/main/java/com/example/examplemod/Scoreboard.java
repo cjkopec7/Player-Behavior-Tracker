@@ -27,7 +27,7 @@ public class Scoreboard extends JFrame implements ActionListener {
 	private String playerName, playerAlias;
 	private int sc, scoreChecks = 0, acts, act;
 	private Player player;
-	private DecimalFormat df = new DecimalFormat("###.##");
+	private DecimalFormat df = new DecimalFormat("#.###");
 
 	/**
 	 * A constructor for the Scoreboard Class
@@ -47,6 +47,7 @@ public class Scoreboard extends JFrame implements ActionListener {
 				"Welcome", JOptionPane.INFORMATION_MESSAGE);
 
 		player = plyr;
+		player.updateScore();
 		sc = plyr.getScore();
 		URL iconURL = getClass().getResource("/images/sword.png");
 		ImageIcon icon = new ImageIcon(iconURL);

@@ -135,8 +135,7 @@ public class Player implements Comparable<Player> {
 				String vl = temp[1].replace(" ", "");
 				String[] values = vl.split(",");
 				statsMap.put(cat, values);
-				
-				
+
 				HashMap<String, Integer> tmpMap = new HashMap<String, Integer>();
 				for (String r : values) {
 					String[] tmp = r.split("=");
@@ -200,12 +199,13 @@ public class Player implements Comparable<Player> {
 	 */
 	public void updateScore() {
 		int s = 0;
-		s += (int) this.getPlayTime() + (int) this.getDistance() + (int) this.getMobKills()
-				+ (int) this.getItemsCrafted() + (int) this.getItemsDropped() + (int) this.getItemsPickedUp()
-				+ (int) this.getBrokeItems() + (int) this.getAmountMined() - (int) this.getDeaths();
+		s += (int) getPlayTime() + (int) getDistance() + (int) getMobKills() + (int) getItemsCrafted()
+				+ (int) getItemsDropped() + (int) getItemsPickedUp() + (int) getItemsUsed() + (int) getBrokeItems()
+				+ (int) getAmountMined() - (int) getDeaths();
 		score = s;
 
 	}
+
 	/***
 	 * Updates the natKills and natDeaths values and adds them to statsMapValues
 	 */
@@ -214,7 +214,6 @@ public class Player implements Comparable<Player> {
 		HashMap<String, Integer> kb = statsMapValues.get("killed_by");
 		HashMap<String, String[]> km = statsMap;
 
-	
 		int kc = 0;
 		int kbc = 0;
 		if (k != null) {
@@ -234,24 +233,21 @@ public class Player implements Comparable<Player> {
 		}
 		natDeath = getDeaths() - kbc;
 		if (natKill > 0) {
-			String [] old = statsMap.get("killed");
-			String[] n = new String[] {("natural forces kill: " + natKill)};
+			String[] old = statsMap.get("killed");
+			String[] n = new String[] { ("natural forces kill: " + natKill) };
 			String[] temp = ArrayUtils.addAll(old, n);
 			k.put("natural forces kill", natKill);
 			statsMapValues.put("killed", k);
 			statsMap.put("killed", temp);
 		}
 		if (natDeath > 0) {
-			String [] old = statsMap.get("killed_by");
-			String[] n = new String[] {("natural forces: " + natDeath)};
+			String[] old = statsMap.get("killed_by");
+			String[] n = new String[] { ("natural forces: " + natDeath) };
 			String[] temp = ArrayUtils.addAll(old, n);
 			kb.put("natural forces", natDeath);
 			statsMapValues.put("killed_by", kb);
 			statsMap.put("killed_by", temp);
 
-
-			
-			
 		}
 	}
 
@@ -282,15 +278,13 @@ public class Player implements Comparable<Player> {
 	 */
 	public float getDistance() {
 		HashMap<String, Integer> f = statsMapValues.get("custom");
-		String[] vals = { "boat", "aviate", "horse", "pig", "strider", "climb", "croutch", "fall", "fly", "sprint",
-				"swim", "walk_on_water", "walk_under_water" };
 		float dis = 0;
 		if (f != null) {
 			for (String s : f.keySet()) {
-				for (String e : vals) {
-					if (s.contains(e)) {
-						dis += (float) f.get(e + "_one_cm");
-					}
+
+				if (s.contains("one_cm")) {
+					dis += f.get(s);
+
 				}
 			}
 		}

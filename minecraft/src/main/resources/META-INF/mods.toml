@@ -8,9 +8,13 @@ modId="csc450project"
 version="1.1"
 displayName="Player Behavior Tracker"
 displayURL="minecraftforge.net"
-credits="CSC-450 Software Engineering - University of North Carolina Wilmington"
+credits="Thanks to Eric Dorshimer, Justin Balderson, Max Groover, Noah Gilgo, Taylor Dalrymple, Carl Blackmon (Tester), Dr. Vetter, and Dr. Cariveau"
 authors="Colby Kopec"
-description='''Okuuuurrrttt.'''
+description='''A University of North Carolina Wilmington CSC-450 Software Engineering Project
+
+
+
+Special thanks to Dr. Vetter and Dr. Cariveau.'''
 
 
   [[dependencies.examplemod]]

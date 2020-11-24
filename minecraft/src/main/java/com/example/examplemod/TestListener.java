@@ -19,7 +19,7 @@ public class TestListener {
 		System.setProperty("java.awt.headless", "false");
 		LivingEntity player = event.getEntityLiving();
 		playerName = player.getName().getString().toString();
-		you = new Scoreboard(new Player(player.getUniqueID(), playerName, ""));
+		you = new Scoreboard(new Player(player.getUniqueID(), playerName, "")); 
 		player.sendMessage(ITextComponent.func_244388_a("BEHAVIOR TRACKER MOD v1.1 : Welcome, " + you.getPlayerAlias()),
 				player.getUniqueID());
 		id = player.getUniqueID();
