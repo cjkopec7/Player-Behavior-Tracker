@@ -14,11 +14,12 @@ by Colby Kopec
 --username "you@email.com" --password "yourpass"
 ```
 
-6. Chnage the directory within the TestListener class
+6. Create a 'Test' world and change the directory within the TestListener class to the location of your world's stat folder.
 
 ```java
 public class TestListener {
-you = new Scoreboard(new Player(player.getUniqueID(), playerName, "C:\\[project_folder]\\run\\saves\\[world_name]\\stats")); }
+String dir = "C:\\[project_folder]\\run\\saves\\[world_name]\\stats";
+you = new Scoreboard(new Player(player.getUniqueID(), playerName, dir)); }
 ```
 
 ## Credits
