@@ -8,7 +8,7 @@ by Colby Kopec
 2. Download [Minecraft Forge](http://files.minecraftforge.net/) recommeneded MDK (version 1.16.4 - 35.1.0)
 3. Use IDE such as [Eclipse IDE for Java](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
 4. Import this as a Gradle project into your workspace, and run Gradle task 'genEclipseRuns'
-5. Change your run arguments for 'runClient' to your Mojang account login information
+5. Change your run arguments for task 'runClient' to your Mojang account login information
 
 ```bash
 --username "you@email.com" --password "yourpass"
@@ -21,6 +21,8 @@ public class TestListener {
 String dir = "C:\\[project_folder]\\run\\saves\\[world_name]\\stats";
 you = new Scoreboard(new Player(player.getUniqueID(), playerName, dir)); }
 ```
+
+7. Launch 'runClient' to begin Minecraft
 
 ## Credits
 A University of North Carolina Wilmington CSC-450 Software Engineering Project
