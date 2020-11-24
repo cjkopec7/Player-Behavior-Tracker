@@ -5,7 +5,7 @@ by Colby Kopec
 ## Installation
 
 1. Install [Minecraft Java Edition](https://www.minecraft.net/en-us/download) (version 1.16.4)
-2. Download [Minecraft Forge](http://files.minecraftforge.net/) recommeneded MDK (version 1.16.4 - 35.1.0)
+2. Download [Minecraft Forge](http://files.minecraftforge.net/) (version 1.16.4 - 35.1.0)
 3. Use IDE such as [Eclipse IDE for Java](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
 4. Import this as a Gradle project into your workspace, and run Gradle task 'genEclipseRuns'
 5. Change your run arguments for task 'runClient' to your Mojang account login information
