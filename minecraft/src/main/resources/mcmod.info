@@ -1,0 +1,10 @@
+[{
+    "modid": "testlistener",
+    "name": "Test Listener",
+    "description": "A testing of EventListeners",
+    "version": "1.0.0.0",
+    "mcversion": "1.16.3",
+    "url": "minecraftforge.net/",
+    "authorList": ["Colby Kopec"],
+    "credits": "A University of North Carolina Wilmington Project"
+}]

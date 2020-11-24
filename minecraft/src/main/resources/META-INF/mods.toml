@@ -1,0 +1,28 @@
+license="All rights reserved"
+loaderVersion="[31,)"
+modLoader="javafml"
+showAsResourcePack=true
+
+[[mods]]
+modId="csc450project"
+version="1.1"
+displayName="Player Behavior Tracker"
+displayURL="minecraftforge.net"
+credits="CSC-450 Software Engineering - University of North Carolina Wilmington"
+authors="Colby Kopec"
+description='''Okuuuurrrttt.'''
+
+
+  [[dependencies.examplemod]]
+	modId="forge"
+	mandatory=true
+	versionRange="[31,)"
+	ordering="NONE"
+	side="BOTH"
+
+  [[dependencies.examplemod]]
+	modId="minecraft"
+	mandatory=true
+	versionRange="[1.16.3]"
+	ordering="NONE"
+	side="BOTH"
