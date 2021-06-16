@@ -27,6 +27,6 @@ you = new Scoreboard(new Player(player.getUniqueID(), playerName, dir)); }
 ## Credits
 A University of North Carolina Wilmington CSC-450 Software Engineering Project
 
-Colby Kopec, Eric Dorshimer, Justin Balderson, Max Groover, Noah Gilgo, Taylor Dalrymple, Carl Blackmon (Tester)
+Colby Kopec, Carl Blackmon (Tester)
 
 Special thanks to Dr. Vetter and Dr. Cariveau
